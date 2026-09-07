@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curriculum Vitae - Hanifah Fitriani</title>
+</head>
+<body>
+
+  <!-- HEADER / BAGIAN ATAS -->
+  <header>
+    <img src="https://via.placeholder.com/150" alt="Foto Hanifah Fitriani" width="150" style="border-radius: 50%;">
+    <h1>Hanifah Fitriani</h1>
+    <h3>Web Developer & UI/UX Enthusiast</h3>
+    <p>
+      Email: <a href="mailto:budi@example.com">hanifah@example.com</a> | 
+      HP: 0812-3456-7890 | 
+      Lokasi:, Indonesia
+    </p>
+    <p>
+      LinkedIn: <a href="https://linkedin.com" target="_blank">linkedin.com/in/budisantoso</a> | 
+      GitHub: <a href="https://github.com" target="_blank">github.com/budisantoso</a>
+    </p>
+  </header>
+
+  <hr>
+
+  <!-- KONTEN UTAMA -->
+  <main>
+
+    <!-- SECTION 1: TENTANG SAYA -->
+    <section id="tentang">
+      <h2>Tentang Saya</h2>
+      <p>
+        Saya adalah seorang <strong>Junior Web Developer</strong> yang berfokus pada pembuatan aplikasi web responsif dan ramah pengguna. Memiliki latar belakang pendidikan Ilmu Komputer serta antusiasme yang tinggi dalam mempelajari teknologi web terbaru.
+      </p>
+    </section>
+
+    <hr>
+
+    <!-- SECTION 2: KEAHLIAN -->
+    <section id="keahlian">
+      <h2>Keahlian (Skills)</h2>
+      <ul>
+        <li><strong>Pemrograman Web:</strong> HTML5, CSS3, JavaScript (ES6)</li>
+        <li><strong>Framework & Tools:</strong> Git, GitHub, VS Code</li>
+        <li><strong>Soft Skills:</strong> Komunikasi, Kerja Sama Tim, Problem Solving</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <!-- SECTION 3: RIWAYAT PENDIDIKAN -->
+    <section id="pendidikan">
+      <h2>Riwayat Pendidikan</h2>
+      <table border="1" cellpadding="8" cellspacing="0" width="100%">
+        <thead>
+          <tr bgcolor="#f2f2f2">
+            <th>Tahun</th>
+            <th>Tingkat / Gelar</th>
+            <th>Instansi / Sekolah</th>
+            <th>IPK / Nilai</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2020 - 2024</td>
+            <td>S1 Teknik Informatika</td>
+            <td>Universitas Indonesia</td>
+            <td>3.80 / 4.00</td>
+          </tr>
+          <tr>
+            <td>2017 - 2020</td>
+            <td>SMA Jurusan IPA</td>
+            <td>SMA Negeri 1 Jakarta</td>
+            <td>88.5 / 100</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <hr>
+
+    <!-- SECTION 4: PENGALAMAN KERJA -->
+    <section id="pengalaman">
+      <h2>Pengalaman Kerja & Organisasi</h2>
+      <ol>
+        <li>
+          <strong>Frontend Developer Intern</strong> - PT Teknologi Nusantara (2023)
+          <p>Membantu mengembangkan antarmuka pengguna web menggunakan HTML, CSS, dan JavaScript.</p>
+        </li>
+        <li>
+          <strong>Anggota Divisi IT</strong> - Himpunan Mahasiswa Informatika (2021 - 2022)
+          <p>Mengelola situs web resmi acara kampus dan mengoordinasikan workshop pemrograman.</p>
+        </li>
+      </ol>
+    </section>
+
+    <hr>
+
+    <!-- SECTION 5: FORMULIR KONTAK -->
+    <section id="kontak">
+   
+    </section>
+
+  </main>
+
+  <hr>
+
+  <!-- FOOTER -->
+  <footer>
+    <p align="center">&copy; 2026 Budi Santoso. Dibuat menggunakan murni HTML5.</p>
+  </footer>
+
+</body>
+</html>

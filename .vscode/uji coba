@@ -1,0 +1,35 @@
+using System;
+
+namespace BiodataApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Judul program
+            Console.WriteLine("=== Program Biodata ===\n");
+
+            // Input nama
+            Console.Write("Masukkan nama: ");
+            string nama = Console.ReadLine();
+
+            // Input umur
+            Console.Write("Masukkan umur: ");
+            int umur = int.Parse(Console.ReadLine());
+
+            // Input tanggal lahir
+            Console.Write("Masukkan tanggal lahir (yyyy-mm-dd): ");
+            string tanggalLahir = Console.ReadLine();
+
+            // Output hasil
+            Console.WriteLine("\n=== Data Kamu ===");
+            Console.WriteLine("Nama          : " + nama);
+            Console.WriteLine("Umur          : " + umur + " tahun");
+            Console.WriteLine("Tanggal Lahir : " + tanggalLahir);
+
+            // Penutup biar tidak langsung close
+            Console.WriteLine("\nTekan tombol apa saja untuk keluar...");
+            Console.ReadKey();
+        }
+    }
+}
