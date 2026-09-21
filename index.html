@@ -3,264 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Curriculum Vitae - Budi Santoso</title>
-  <style>
-    /* 1. RESET & BASE STYLE (Menerapkan Selector Universal dan Format Warna HSL) */
-    * {
-      margin: 0;/*mengatur jarak semua sisi antar kolom*/
-      padding: 0;/* mengatur jarak antara tepi dan isi kolom*/
-      box-sizing: border-box;/*menghilangkan jarak bawaan elemen agar tidak ada space*/
-    }
-    
-    body {
-      font-family: 'Segoe UI', Arial, sans-serif; /*jenis huruf pada halaman*/
-      background-color: hsl(220, 15%, 95%); /*warna latar belakang*/
-      color: #333333;/*warna font*/
-      line-height: 3.6; /*jarak antar baris kata*/
-      max-width: 800px; /*mengatur maksimal lebar halaman*/
-      /* Box Model: Margin atas 30px, Kiri/Kanan Auto (Tengah), Bawah 0 */
-      margin: 30px auto 0 auto; /*mengatur jarak semua sisi antar kolom*/
-      padding: 0 15px;/* mengatur jarak antara tepi dan isi kolom*/
-    }
-
-    /* 2. CONTAINER CARDS (Group Selector) */
-    header, section {
-      background: #ffffff;/*warna latar belakang*/
-      padding: 25px;/* mengatur jarak antara tepi dan isi kolom*/
-      border-radius: 10px;/*mengatur ujung kotak agar melengkung*/
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);/*membuat bayangan pada kotak, agar berdimensi*/
-      margin-bottom: 20px;/*mengatur jarak bawah kolom*/
-    }
-
-    h2 {
-      color: #2c3e50; /*warna font*/
-      border-bottom: 2px solid hsl(204, 70%, 53%);/*memberi garis bawah pada text tidak putus putus*/
-      padding-bottom: 5px;/* mengatur jarak antara tulisan dengan garis bawah*/
-      margin-bottom: 15px;/*mengatur jarak bawah antara garis dan teks selanjutnya*/
-      font-size: 1.3rem; /* mengatur ukuran huruf*/
-    }
-
-    /* 3. HEADER (Penerapan CSS Grid, Position Relative & Absolute) */
-    header {
-      display: grid; /*mengatur isi sesuai baris agar foto dan informasi bisa berdampingan*/
-      grid-template-columns: 130px 1fr;/*membagi menjadi 2 kolom yang berbeda*/
-      gap: 20px; /* memberi jarak antar elemen seperti foto dan informasi*/
-      align-items: center;/*membuat posisi sejajar di tengah*/
-      position: relative;/*menjadi acuan posisi untuk elemen didalamnya*/ 
-    }
-
-    header img {
-      border: 3px solid #3498db;/* mengatur warna pada tepi foto*/
-      border-radius: 50%;/*membuat bentuk foto menjadi bulat*/
-    }
-
-    /* Badge "Open to Work" menggunakan Position Absolute */
-    .badge-status {
-      position: absolute; 
-      top: 15px;/*memberikan jarak dibagian atas*/
-      right: 15px;/*memberikan jarak dibagian kanan*/
-      background-color: hsl(145, 63%, 42%);/*warna latar belakang*/
-      color: white;/*warna font*/
-      padding: 4px 10px;/* mengatur jarak antara tepi dan isi kolom*/
-      font-size: 0.75rem;/* mengatur ukuran huruf*/
-      border-radius: 20px;/*mengatur ujung kotak agar melengkung*/
-      font-weight: bold;/*mencetak tebal font*/
-    }
-
-    /* Link dan Pseudo-class :hover */
-    a {
-      color: #3498db;/*warna font*/
-      text-decoration: none;/*menghilangkan garis bawah pada link*/
-      font-weight: 600;;/*menentukan tebal font*/
-    }
-    
-    a:hover {
-      text-decoration: underline; /*memunculakan garis bawah pada link*/
-    }
-
-    /* 4. KEAHLIAN & DISPLAY PROPERTIES */
-    .skills-grid {
-      display: grid;/*mengatur isi sesuai baris agar foto dan informasi bisa berdampingan*/
-      grid-template-columns: 1fr 1fr 1fr; /*membagi menjadi 2 kolom yang berbeda*/
-      gap: 15px;/* memberi jarak antar elemen seperti foto dan informasi*/
-      list-style: none;/*menghilangkan tanda bulat bawaan list*/
-    }
-
-    .skill-card {
-      background: #f8f9fa;/*warna latar belakang*/
-      padding: 15px;/* mengatur jarak antara tepi dan isi kolom*/
-      border-radius: 8px;/*membuat bentuk foto menjadi bulat*/
-      border-left: 4px solid #3498db;/*memberi garis tepi hanya di sebelah kiri*/
-    }
-
-    .skill-card h3 {
-      font-size: 1rem;/*ukuran font*/
-      color: #2c3e50;/*warna font*/
-      margin-bottom: 5px;/* memberi jarak dibawah judul*/
-    }
-
-    /* Class untuk belajar Display & Visibility */
-    .aksesibilitas-tersembunyi {
-      display: none; /*membuat elemen hilang dari halaman sepenuhnya*/
-    }
-
-    .elemen-cadangan {
-      visibility: hidden; /*membuat elemen hilang dari halaman tetapi masih ada tempatnya*/
-    }
-
-    label {
-      display: inline-block; /*bisa mengatur jarak elemen seperti block*/
-      margin-bottom: 5px;/*mengatur jarak bawah antara garis dan teks selanjutnya*/
-      font-weight: 600;/*menentukan tebal font*/
-    }
-
-    /* 5. LISTS & TABLES */
-    ol { padding-left: 20px; }/* mengatur jarak antara tepi dan isi bagian kiri kolom*/
-    li { margin-bottom: 8px; }/*mengatur jarak bawah antara garis dan teks selanjutnya*/
-
-    table {
-      width: 100%;/*membuat table 100% memenuhi kontainer*/
-      border-collapse: collapse;/*mengabungkan garis bordr agar tidak terlihat terpisah*/
-      margin-top: 10px;/*memberi jarak diaatas table*/
-    }
-    
-    th, td {
-      padding: 10px;/* mengatur jarak antara tepi dan isi kolom*/
-      text-align: left; /*membuat text rata kiri*/
-      border-bottom: 1px solid #e0e0e0;/*memberi garis dibagian bawah*/
-    }
-    
-    th {
-      background-color: #f8f9fa;/*warna latar belakang*/
-      color: #2c3e50;/*warna font*/
-    }
-
-    /* 6. FORMULIR DENGAN CSS GRID */
-    form {
-      display: grid;/*mengatur isi sesuai baris agar foto dan informasi bisa berdampingan*/
-      gap: 15px;/* memberi jarak antar elemen seperti foto dan informasi*/
-    }
-
-    .form-row {
-      display: grid;/*mengatur isi sesuai baris agar foto dan informasi bisa berdampingan*/
-      grid-template-columns: 1fr 1fr; /*membagi menjadi 2 kolom yang berbeda*/
-      gap: 15px;/* memberi jarak antar elemen seperti foto dan informasi*/
-    }
-
-    input[type="text"], input[type="email"], textarea {
-      width: 100%;/*membuat table 100% memenuhi kontainer*/
-      padding: 10px;/* mengatur jarak antara tepi dan isi kolom*/
-      border: 1px solid #cccccc;/*memberi garis tepi pada input*/
-      border-radius: 5px;/*membuat bentuk foto menjadi bulat*/
-      font-family: inherit;/*jenis huruf pada halaman*/
-    }
-
-    /* Pseudo-class :focus untuk Form */
-    input:focus, textarea:focus {
-      outline: none;/*menghilangkan garis luar*/
-      border-color: #3498db;/*warna border*/
-      border: 2px solid #3498db;/*mengubah border menjadi 2px berwarna biru*/
-    }
-
-    button {
-      background-color: #3498db;/*warna latar belakang*/
-      color: white;/*warna font*/
-      padding: 10px 20px;/* mengatur jarak antara tepi dan isi kolom*/
-      border: none;/*menghilangkan boarder*/
-      border-radius: 5px;/*membuat bentuk foto menjadi bulat*/
-      font-weight: bold;/*mencetak tebal font*/
-      cursor: pointer;/*cursur berubah menjadi pointer ketika diarahkan*/
-      transition: background 0.3s;/*membuat perubahan backround secara halus*/
-      justify-self: start;/* menempatkan tombol di awal area grid*/
-      display: inline-block;/*membuat tombol mengunakan prilaku inline block*/
-    }
-
-    button:hover {
-      background-color: red; /*warna latar belakang*/
-    }
-
-    /* 7. FOOTER (Penerapan Position Sticky & Z-Index) */
-    footer {
-      position: sticky; /*ikut bergerak saat di scroll*/
-      bottom: 0;/*mengatur jarak di bagian bawah*/
-      z-index: 100; /*urutan elemen*/
-      background-color: #2c3e50;/*warna latar belakang*/
-      color: #ffffff;/*warna font*/
-      text-align: center;/*membuat teks berada di tengah*/
-      font-size: 0.9rem;/*menentukan ukuran font*/
-      padding: 15px;/* mengatur jarak antara tepi dan isi kolom*/
-      margin-top: 20px;/*mengatur jarak di bagian atas*/
-      border-radius: 8px 8px 0 0;/*membuat bentuk foto menjadi bulat*/
-    }
-
-    /* 8. MEDIA QUERY (Responsive untuk Tampilan HP) */
-    @media (max-width: 600px) { /*mengatur maksimal lebar halaman*/
-     
-      header {
-        grid-template-columns: 1fr; /*membagi menjadi 2 kolom yang berbeda*/
-        justify-items: center;/*membuat teks berada di tengah secara horizontal*/
-        text-align: center;/*membuat teks berada di tengah*/
-      }
-      .skills-grid {
-        grid-template-columns: 1fr;/*membagi menjadi 2 kolom yang berbeda*/
-      }
-      .form-row {
-        grid-template-columns: 1fr; /*membagi menjadi 2 kolom yang berbeda*/
-      }
-    }
-  </style>
+  <title>Curriculum Vitae - Hanifah Fitriani</title>
 </head>
 <body>
-  
-  <!-- HEADER -->
+
+  <!-- HEADER / BAGIAN ATAS -->
   <header>
-    <span class="badge-status">Open to Work</span>
-    <img src="https://via.placeholder.com/150" alt="Foto Hanifah Fitriani" width="120" height="120">
-    <div>
-      <h1>Hanifah Fitriani</h1>
-      <h3>Web Developer & UI/UX Enthusiast</h3>
-      <p>Email: <a href="mailto:hanifah@example.com">hanifah@example.com</a> | HP: 0812-3456-7890 | Lokasi: Jakarta</p>
-      <p>LinkedIn: <a href="#" target="_blank">linkedin.com/in/Hanifah Fitriani</a> | GitHub: <a href="#" target="_blank">github.com/Haniart</a></p>
-    </div>
+    <img src="https://via.placeholder.com/150" alt="Foto Hanifah Fitriani" width="150" style="border-radius: 50%;">
+    <h1>Hanifah Fitriani</h1>
+    <h3>Web Developer & UI/UX Enthusiast</h3>
+    <p>
+      Email: <a href="mailto:hanifahfitriani@example.com">hanifah@example.com</a> | 
+      HP: 0821-6000-7958 | 
+      Lokasi:, Indonesia
+    </p>
+    <p>
+      LinkedIn: <a href="https://linkedin.com" target="_blank">linkedin.com/in/budisantoso</a> | 
+      GitHub: <a href="https://github.com" target="_blank">github.com/budisantoso</a>
+    </p>
   </header>
+
+  <hr>
 
   <!-- KONTEN UTAMA -->
   <main>
-    <!-- Bukti penerapan Display & Visibility -->
-    <p class="aksesibilitas-tersembunyi">Teks ini hilang sepenuhnya dari alur dokumen (display: none).</p>
-    <div class="elemen-cadangan">Area ini tetap memakan ruang tetapi teksnya tersembunyi (visibility: hidden).</div>
 
-    <!-- SECTION: TENTANG SAYA -->
+    <!-- SECTION 1: TENTANG SAYA -->
     <section id="tentang">
       <h2>Tentang Saya</h2>
-      <p>Saya adalah seorang <strong>Junior Web Developer</strong> yang berfokus pada pembuatan aplikasi web responsif dan ramah pengguna. Memiliki latar belakang pendidikan Ilmu Komputer serta antusiasme yang tinggi dalam mempelajari teknologi web terbaru.</p>
+      <p>
+        Saya adalah seorang <strong>Junior Web Developer</strong> yang berfokus pada pembuatan aplikasi web responsif dan ramah pengguna. Memiliki latar belakang pendidikan Ilmu Komputer serta antusiasme yang tinggi dalam mempelajari teknologi web terbaru.
+      </p>
     </section>
 
-    <!-- SECTION: KEAHLIAN -->
+    <hr>
+
+    <!-- SECTION 2: KEAHLIAN -->
     <section id="keahlian">
       <h2>Keahlian (Skills)</h2>
-      <ul class="skills-grid">
-        <li class="skill-card">
-          <h3>Pemrograman Web</h3>
-          <p>HTML5, CSS3, JavaScript (ES6)</p>
-        </li>
-        <li class="skill-card">
-          <h3>Framework & Tools</h3>
-          <p>Git, GitHub, VS Code</p>
-        </li>
-        <li class="skill-card">
-          <h3>Soft Skills</h3>
-          <p>Komunikasi, Kerja Sama Tim, Problem Solving</p>
-        </li>
+      <ul>
+        <li><strong>Pemrograman Web:</strong> HTML5, CSS3, JavaScript (ES6)</li>
+        <li><strong>Framework & Tools:</strong> Git, GitHub, VS Code</li>
+        <li><strong>Soft Skills:</strong> Komunikasi, Kerja Sama Tim, Problem Solving</li>
       </ul>
     </section>
 
-    <!-- SECTION: PENDIDIKAN -->
+    <hr>
+
+    <!-- SECTION 3: RIWAYAT PENDIDIKAN -->
     <section id="pendidikan">
       <h2>Riwayat Pendidikan</h2>
-      <table>
+      <table border="1" cellpadding="8" cellspacing="0" width="100%">
         <thead>
-          <tr>
+          <tr bgcolor="#f2f2f2">
             <th>Tahun</th>
             <th>Tingkat / Gelar</th>
             <th>Instansi / Sekolah</th>
@@ -275,16 +70,18 @@
             <td>3.80 / 4.00</td>
           </tr>
           <tr>
-            <td>2017 - 2020</td>
-            <td>SMA Jurusan IPA</td>
-            <td>SMA Negeri 1 Jakarta</td>
+            <td>2025 - 2028</td>
+            <td>SMk Jurusan PPLG</td>
+            <td>SMK TELKOM BANDUNG</td>
             <td>88.5 / 100</td>
           </tr>
         </tbody>
       </table>
     </section>
 
-    <!-- SECTION: PENGALAMAN -->
+    <hr>
+
+    <!-- SECTION 4: PENGALAMAN KERJA -->
     <section id="pengalaman">
       <h2>Pengalaman Kerja & Organisasi</h2>
       <ol>
@@ -299,36 +96,20 @@
       </ol>
     </section>
 
-    <!-- TEMPAT TUGAS TAMBAHAN DI SINI -->
-    <!-- Tambahkan <section> Portofolio atau Hobi & Minat kamu di bawah baris ini! -->
+    <hr>
 
-
-    <!-- SECTION: KONTAK -->
+    <!-- SECTION 5: FORMULIR KONTAK -->
     <section id="kontak">
-      <h2>Hubungi Saya</h2>
-      <form action="#" method="POST">
-        <div class="form-row">
-          <div>
-            <label for="nama">Nama Lengkap:</label>
-            <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" required>
-          </div>
-          <div>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="contoh@email.com" required>
-          </div>
-        </div>
-        <div>
-          <label for="pesan">Pesan Anda:</label>
-          <textarea id="pesan" name="pesan" rows="4" placeholder="Tuliskan pesan pekerjaan atau penawaran di sini..." required></textarea>
-        </div>
-        <button type="submit">Kirim Pesan</button>
-      </form>
+   
     </section>
+
   </main>
+
+  <hr>
 
   <!-- FOOTER -->
   <footer>
-    <p>&copy; 2026 Budi Santoso. Dibuat menggunakan HTML5 & CSS3.</p>
+    <p align="center">&copy; 2026 Budi Santoso. Dibuat menggunakan murni HTML5.</p>
   </footer>
 
 </body>
